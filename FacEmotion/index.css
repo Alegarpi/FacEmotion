@@ -1,0 +1,124 @@
+* { padding: 0; margin: 0; }
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+}
+body {
+  max-width: 100%;
+}
+
+canvas {
+  position: absolute;
+}
+
+#video-canvas {
+  background-color: #2195f300;
+}
+
+#gray-canvas {
+  top: 0%;
+  position: relative;
+  filter: grayscale(1);
+}
+
+.header-grid {grid-area: header;}
+.video-grid {grid-area: video;}
+.info-grid {grid-area: info;}
+.buttons-grid {grid-area: buttons;}
+
+.grid-container {
+  max-width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    'header header header header header'
+    'video video video info info'
+    'video video video info info'
+    'video video video info info'
+    'buttons buttons buttons buttons buttons';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.grid-container > div.header-grid {
+  font-size: 50px;
+}
+
+.grid-container > div.video-grid {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0;
+}
+
+.grid-container > div.info-grid {
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-areas:
+    'info'
+    'face1'
+    'face2'
+    'face3'
+    'face4';
+  background-color: rgba(255, 255, 255, 0.8);
+  gap: 1px;
+  text-align: left;
+  white-space: pre-line;
+  padding: 10px;
+}
+
+.info {grid-area: info;}
+.face1 {grid-area: face1;}
+.face2 {grid-area: face2;}
+.face3 {grid-area: face3;}
+.face4 {grid-area: face4;}
+.grid-container > div.info-grid > div.info {
+  text-align: center;
+}
+.grid-container > div.info-grid > div.face1 {
+  background-color: rgb(216, 63, 63);
+  width:30vw;
+  padding: 10px;
+}
+.grid-container > div.info-grid > div.face2 {
+  background-color: rgb(222, 225, 63);
+  width:30vw;
+  padding: 10px;
+}
+.grid-container > div.info-grid > div.face3 {
+  background-color: rgb(60, 216, 63);
+  width:30vw;
+  padding: 10px;
+}
+.grid-container > div.info-grid > div.face4 {
+  background-color: rgb(57, 65, 221);
+  width:30vw;
+  padding: 10px;
+}
+
+.grid-container > div.buttons-grid {
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+#video {
+  max-width: 100%;
+  height: 100%;
+}
+
+#text {
+  position:fixed;
+  bottom: 30%;
+}

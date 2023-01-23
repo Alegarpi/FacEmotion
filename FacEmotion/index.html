@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <base href=".">
+    <!-- Require the peer dependencies of face-detection. -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.X/dist/tf.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-detection"></script>
+
+    <!-- ml5 models-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    
+    <title>FacEmotional</title>
+    <link rel="stylesheet" href="index.css">
+
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <div class="header-grid">FACEMOTION</div>
+      <div class="video-grid">
+        <video id="video" autoplay muted></video>
+        <canvas id="video-canvas"></canvas>
+      </div>
+      <div class="info-grid">
+        <div  id="info" class="info">INFO</div>
+        <div id="face1" class="face1" >No face detected!<br><br/></div>
+        <div id="face2" class="face2" >No face detected!<br><br/></div>
+        <div id="face3" class="face3" >No face detected!<br><br/></div>
+        <div id="face4" class="face4" >No face detected!<br><br/></div>
+        <canvas id="mask-canvas" style="display: none;" ></canvas>
+        <canvas id="gray-canvas" style="display: none;"></canvas>
+      </div>
+      <div class="buttons-grid">
+        
+      </div>
+    </div>
+    <script type="module" src="facEmotional.js"></script>
+  </body>
+
+</html>
