@@ -112,7 +112,11 @@ video.addEventListener('play', () => {
             if (e)
               console.log(e);
             else {
-              text = r[0].label + "  " + Math.round(r[0].confidence * 10000) / 10000;
+              let label = "With mask"
+              if (r[0].label == "without_mask") {
+                label = "Without mask";
+              }
+              text = label + "  " + Math.round(r[0].confidence * 10000) / 10000;
               hasMask = r[0].label;
             }
           });
